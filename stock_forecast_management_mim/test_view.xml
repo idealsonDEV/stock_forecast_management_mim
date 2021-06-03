@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record model="ir.ui.view" id="stock_data_next_profile">
+      <field name="name">stock data next profile</field>
+      <field name="model">stock.data.next.profile</field>
+      <field name="arch" type="xml">
+        <tree>
+              <field name="product_id"/>
+              <field name="unity"/>
+              <field name="current_qty"/>
+              <field name="necessary_qty"/>
+              <field name="security_qty"/>
+              <field name="complet_qty"/>
+              <field name="future_qty"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_data_multi_product">
+      <field name="name">stock data multi product</field>
+      <field name="model">stock.data.multi.product</field>
+      <field name="arch" type="xml">
+        <tree>
+              <field name="product_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_data_setting_profile_list">
+      <field name="name">stock data setting profile list</field>
+      <field name="model">stock.data.setting.profile</field>
+      <field name="arch" type="xml">
+        <tree string="Profilées" editable="bottom">
+              <button class="oe_read_only oe_highlight" string="Calculer" type="object" name="compute_tonnage">
+              </button>
+              <field name="product_id"/>
+              <field name="unity"/>
+              <field name="weight"/>
+              <field name="minimal" attrs="{'readonly': False}"/>
+              <field name="ratio" attrs="{'readonly': True}"/>
+              <field name="tonnage" attrs="{'readonly': True}"/>
+
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_data_setting_profile_form">
+      <field name="name">stock data setting profile form</field>
+      <field name="model">stock.data.setting.profile</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+              <button class="oe_read_only oe_highlight" string="Calculer les quantité moyenne" type="object" name="compute_mean_quantite">
+              </button>
+              <button class="oe_read_only oe_highlight" string="Calculer ratio et tonnage" type="object" name="compute_tonnage">
+              </button>
+          </header>
+          <sheet>
+            <group>
+              <separator colspan="6" string="Configuration Mininal"/>
+              <field name="product_id"/>
+              <field name="unity"/>
+              <field name="weight"/>
+              <field name="minimal" attrs="{'readonly': False}"/>
+              <field name="minimal_in" attrs="{'readonly': True}"/>
+              <field name="minimal_out" attrs="{'readonly': True}"/>
+              <field name="ratio" attrs="{'readonly': True}"/>
+              <field name="tonnage" attrs="{'readonly': True}"/>
+            </group>
+            <group>
+              <notebook>
+                <page string="Articles Alternatifs">
+                  <field name="product_ids"/>
+                </page>
+              </notebook>
+            </group>
+            <group>
+              <field name="graph" widget="image" attrs="{'readonly': True}"/>
+              <field name="graph2" widget="image" attrs="{'readonly': True}"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_data_finish_graph">
+      <field name="name">stock data finish graph</field>
+      <field name="model">stock.data.finish.graph</field>
+      <field name="type">graph</field>
+      <field name="arch" type="xml">
+         <graph string="Graphique des 16 dernier trimestre">
+              <field name="trimestre" interval="1"/>
+              <field name="quantite" type="measure"/>
+              <field name="name"/>
+        </graph>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_data_article_list">
+      <field name="name">Stock data article List</field>
+      <field name="model">stock.data.article.list</field>
+      <field name="arch" type="xml">
+        <tree>
+              <field name="name"/>
+              <field name="access"/>
+              <field name="qu_no_month"/>
+              <field name="qu_no_month"/>
+              <field name="qu_no_season"/>
+              <field name="qu_season"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_data_existing_list">
+      <field name="name">Stock data existing List</field>
+      <field name="model">stock.data.existing.list</field>
+      <field name="arch" type="xml">
+        <tree>
+              <field name="name"/>
+              <field name="stock"/>
+              <field name="quantite"/>
+              <field name="access"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_data_finish_forecast">
+      <field name="name">Stock data finish Forecast</field>
+      <field name="model">stock.data.finish.forecast</field>
+      <field name="arch" type="xml">
+        <tree>
+              <field name="name"/>
+              <field name="tms"/>
+              <field name="q_no_season"/>
+              <field name="q_season"/>
+              <field name="largeur"/>
+              <field name="hauteur"/>
+              <field name="div2"/>
+              <field name="div3"/>
+              <field name="style"/>
+              <field name="moust"/>
+              <field name="inter"/>
+              <field name="state" widget="image" attrs="{'invisible': 0}"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="stock_data_day_list">
+      <field name="name">Stock data List</field>
+      <field name="model">stock.data.range.day</field>
+      <field name="arch" type="xml">
+        <tree>
+              <field name="date_start"/>
+              <field name="date_end"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+
+    <record model="ir.ui.view" id="stock_data_day_form">
+      <field name="name">Stock data Form</field>
+      <field name="model">stock.data.range.day</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+              <button class="oe_read_only oe_highlight" string="Calculer les commande existantes" type="object" name="get_data_day_future">
+              </button>
+              <button class="oe_read_only oe_highlight" string="Calculer le tonnage des profilés" type="object" name="next_profile">
+              </button>
+              <button class="oe_read_only oe_highlight" string="Calculer la prévison des ventes sur un trimestre" type="object" name="last_data_state">
+              </button>
+              <button class="oe_read_only oe_highlight" string="Calculer les articles à consommer sur un trimestre" type="object" name="product2articles">
+              </button>
+          </header>
+          <sheet>
+            <group>
+              <separator colspan="6" string="La période à Calculer"/>
+              <field name="date_start"/>
+              <field name="date_end"/>
+              <field name="tonnage"/>
+              <field name="real_tonnage" attrs="{'readonly': True}"/>
+            </group>
+            <separator colspan="6"  string="Les prévisions des profilés"/>
+            <notebook>
+              <page>
+                <field name="data_next_profile"/>
+              </page>
+            </notebook>
+            <separator colspan="6" string="Les arcticles pour les production existantes"/>
+            <notebook>
+              <page>
+                <field name="data_article_exist"/>
+              </page>
+            </notebook>
+            <separator colspan="6" string="Les arcticles à produire pour le prochain trimestre"/>
+            <notebook>
+              <page>
+                <field name="data_finish_last"/>
+              </page>
+            </notebook>
+            <separator colspan="6" string="Les arcticles à consommer pour le prochain trimestre"/>
+            <notebook>
+              <page>
+                <field name="data_article_last"/>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="stock_data_window">
+      <field name="name">Prévison</field>
+      <field name="res_model">stock.data.range.day</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="stock_data_setting">
+      <field name="name">Réglage minimal</field>
+      <field name="res_model">stock.data.setting.profile</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="trimestre_data_states">
+      <field name="name">Données Trimestrielle</field>
+      <field name="res_model">stock.data.finish.graph</field>
+      <field name="view_mode">graph</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="idealplanification.action_server">
+      <field name="name">idealplanification server</field>
+      <field name="model_id" ref="model_idealplanification_idealplanification"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="idealplanification" id="idealplanification.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="idealplanification.menu_1" parent="idealplanification.menu_root"/>
+    <menuitem name="Menu 2" id="idealplanification.menu_2" parent="idealplanification.menu_root"/>
+    -->
+    <menuitem id="stock_data_root_menu" name="Prévision des qunatitées" 
+        parent="stock.menu_stock_root" sequence="6"/>
+    <!-- actions -->
+    
+    <menuitem name="Prévison" id="stock_data_item_menu" parent="stock_data_root_menu"
+              action="stock_data_window" sequence="1"/>
+    <menuitem name="Configuration Mininal" id="minimum_setting" parent="stock_data_root_menu"
+              action="stock_data_setting" sequence="2"/>
+    <menuitem name="Données Trimestrielles" id="data_16_states" parent="stock_data_root_menu"
+              action="trimestre_data_states" sequence="3"/>
+    <!--
+    <menuitem name="Server to list" id="idealplanification" parent="idealplanification.menu_2"
+              action="idealplanification.action_server"/>
+    -->
+  </data>
+</openerp>

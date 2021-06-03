@@ -1,0 +1,142 @@
+<openerp>
+    <data noupdate="1">
+        <record model="stock.data.setting.profile" id="P60-K-D-R">
+            <field name="product_id">508</field>
+            <field name="unity">12</field>
+            <field name="weight">5.858</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P60-K-D">
+            <field name="product_id">507</field>
+            <field name="unity">12</field>
+            <field name="weight">5.597</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P60-MSX-R">
+            <field name="product_id">1288</field>
+            <field name="unity">12</field>
+            <field name="weight">8.816</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P60-DY-R">
+            <field name="product_id">1289</field>
+            <field name="unity">12</field>
+            <field name="weight">1.8212</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P60-FZT">
+            <field name="product_id">506</field>
+            <field name="unity">12</field>
+            <field name="weight">4.8024</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P60-ST-R">
+            <field name="product_id">609</field>
+            <field name="unity">12</field>
+            <field name="weight">6.67</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P60-NKS-R">
+            <field name="product_id">511</field>
+            <field name="unity">12</field>
+            <field name="weight">7.076</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P60-WKS-R">
+            <field name="product_id">1291</field>
+            <field name="unity">12</field>
+            <field name="weight">7.424</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P60-NKMSX-R">
+            <field name="product_id">1292</field>
+            <field name="unity">12</field>
+            <field name="weight">8.7</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="F-OGT">
+            <field name="product_id">502</field>
+            <field name="unity">12</field>
+            <field name="weight">0.348</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P-MFB">
+            <field name="product_id">504</field>
+            <field name="unity">12</field>
+            <field name="weight">2.0474</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T60-KB">
+            <field name="product_id">516</field>
+            <field name="unity">12</field>
+            <field name="weight">5.7536</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T88-PKJ">
+            <field name="product_id">519</field>
+            <field name="unity">12</field>
+            <field name="weight">7.424</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T-95-S-R">
+            <field name="product_id">1319</field>
+            <field name="unity">12</field>
+            <field name="weight">5.365</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T-MS">
+            <field name="product_id">515</field>
+            <field name="unity">12</field>
+            <field name="weight">6.438</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T-MFB">
+            <field name="product_id">514</field>
+            <field name="unity">12</field>
+            <field name="weight">1.4964</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T95-FB">
+            <field name="product_id">523</field>
+            <field name="unity">12</field>
+            <field name="weight">1.363</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T88-DY-R">
+            <field name="product_id">1294</field>
+            <field name="unity">12</field>
+            <field name="weight">1.508</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T88-SSLJ">
+            <field name="product_id">520</field>
+            <field name="unity">12</field>
+            <field name="weight">1.74</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T-closing">
+            <field name="product_id">535</field>
+            <field name="unity">12</field>
+            <field name="weight">1.566</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T80-88-DSS">
+            <field name="product_id">517</field>
+            <field name="unity">12</field>
+            <field name="weight">2.61</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="P50-MB">
+            <field name="product_id">534</field>
+            <field name="unity">12</field>
+            <field name="weight">3.7004</field>
+            <field name="minimal">6.0</field>
+        </record>
+        <record model="stock.data.setting.profile" id="T112-K">
+            <field name="product_id">1293</field>
+            <field name="unity">12</field>
+            <field name="weight">9.28</field>
+            <field name="minimal">6.0</field>
+        </record>
+    </data>
+</openerp>

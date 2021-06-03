@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_forecast_management_mim_stock_forecast_management_mim,stock_forecast_management_mim.stock_forecast_management_mim,model_stock_forecast_management_mim_stock_forecast_management_mim,,1,0,0,0
