@@ -27,7 +27,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'test_view.xml',
+        'sotck_data_view.xml',
         'data_minimal.xml'
         #'templates.xml',
     ],

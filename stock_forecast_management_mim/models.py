@@ -9,7 +9,7 @@ from collections import OrderedDict as ord
 
 from openerp import SUPERUSER_ID
 
-from openerp.addons.product import _common
+#from openerp.addons.product import _common
 from openerp import tools
 from openerp.tools.safe_eval import safe_eval
 

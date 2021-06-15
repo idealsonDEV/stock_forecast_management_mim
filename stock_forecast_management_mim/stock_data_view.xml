@@ -191,19 +191,19 @@
                 <field name="data_next_profile"/>
               </page>
             </notebook>
-            <separator colspan="6" string="Les arcticles pour les production existantes"/>
+            <separator colspan="6" string="Les articles pour les production existantes"/>
             <notebook>
               <page>
                 <field name="data_article_exist"/>
               </page>
             </notebook>
-            <separator colspan="6" string="Les arcticles à produire pour le prochain trimestre"/>
+            <separator colspan="6" string="Les articles à produire pour le prochain trimestre"/>
             <notebook>
               <page>
                 <field name="data_finish_last"/>
               </page>
             </notebook>
-            <separator colspan="6" string="Les arcticles à consommer pour le prochain trimestre"/>
+            <separator colspan="6" string="Les articles à consommer pour le prochain trimestre"/>
             <notebook>
               <page>
                 <field name="data_article_last"/>
@@ -229,7 +229,7 @@
     </record>
 
     <record model="ir.actions.act_window" id="trimestre_data_states">
-      <field name="name">Données Trimestrielle</field>
+      <field name="name">Données Trimestrielles</field>
       <field name="res_model">stock.data.finish.graph</field>
       <field name="view_mode">graph</field>
     </record>
@@ -260,7 +260,7 @@
     <menuitem name="Menu 1" id="idealplanification.menu_1" parent="idealplanification.menu_root"/>
     <menuitem name="Menu 2" id="idealplanification.menu_2" parent="idealplanification.menu_root"/>
     -->
-    <menuitem id="stock_data_root_menu" name="Prévision des qunatitées" 
+    <menuitem id="stock_data_root_menu" name="Prévision des quantitées" 
         parent="stock.menu_stock_root" sequence="6"/>
     <!-- actions -->
     
