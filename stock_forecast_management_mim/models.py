@@ -423,6 +423,7 @@ class stockDayRange(osv.osv):
                 ('date_planned', '<=', date_fx),
                 ('state', '!=', 'cancel'),
                 ('state', '!=', 'done'),
+                ('bom_id', '!=', False)
                 ])
             for product in prod_obj.browse(cr, uid, search, context=context):
                 res = prod_obj._prepare_lines(cr, uid, product, properties=properties, context=context)
