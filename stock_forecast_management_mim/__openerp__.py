@@ -26,8 +26,9 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'sotck_data_view.xml',
+        'group.xml',
+        'security/ir.model.access.csv',
+        'stock_data_view.xml',
         'data_minimal.xml'
         #'templates.xml',
     ],

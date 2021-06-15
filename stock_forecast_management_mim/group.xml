@@ -1,0 +1,8 @@
+<openerp>
+    <data>
+        <record id="group_forecast_data" model="res.groups">
+            <field name="name">Groupe Prévision des stocks</field>
+            <field name="category_id" ref="base.module_category_warehouse_management"/>
+        </record>
+    </data>
+</openerp>
