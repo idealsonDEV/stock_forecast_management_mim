@@ -439,10 +439,7 @@ class stockDayRange(osv.osv):
                     list_out_mo.append(product.name)
                 elif largeur == 0.0 and hauteur == 0.0:
                     list_out_mo_no.append(product.name)
-                    if u'Dimension : ' in product.description:
-                        ext1 = re.match(r'.*\sDimension : ([0-9]*) x ([0-9]*) HT*', product.description)
-                    else:
-                        ext1 = re.match(r'.*\s([0-9]*) x ([0-9]*) HT*', product.description)
+                    ext1 = re.match(r'.*\s([0-9]*) x ([0-9]*) HT*', product.description)
                     if ext1:
                         largeur = float(ext1.group(1))
                         hauteur = float(ext1.group(2))
@@ -626,7 +623,7 @@ class stockDayRange(osv.osv):
                                 largeur = float(ext1.group(1))
                                 hauteur = float(ext1.group(2))
                         if largeur == 0 or hauteur == 0:
-                            raise osv.except_osv("Error 405", "Erreur de convertion de la chaine avec larngeur et hauteur avec RegEx")
+                            raise osv.except_osv("Error 405", "Erreur de convertion de la chaine avec larngeur et hauteur avec RegEx "+stock.name)
                         localdict['largeur'] = largeur
                         localdict['hauteur'] = hauteur
                         localdict['tms'] = line.tms
@@ -1471,7 +1468,6 @@ class stockDayRange(osv.osv):
             }
             vals.append(val)
         self.write({ 'data_article_last': [(0, 0, val) for val in vals]})
-
 
 
 
