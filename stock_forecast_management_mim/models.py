@@ -440,20 +440,12 @@ class stockDayRange(osv.osv):
                 elif largeur == 0.0 and hauteur == 0.0:
                     list_out_mo_no.append(product.name)
                     if u'Dimension : ' in product.description:
-                        ext1 = re.match(r'.*\sDimension : ([0-9]*) x ([0-9]*) HT', product.description)
-                        if ext1:
-                            largeur = float(ext1.group(1))
-                            hauteur = float(ext1.group(2))
-                        else:
-                            ext1 = re.match(r'.*\s([0-9]*) x ([0-9]*) HT', product.description)
-                            if ext1:
-                                largeur = float(ext1.group(1))
-                                hauteur = float(ext1.group(2))
+                        ext1 = re.match(r'.*\sDimension : ([0-9]*) x ([0-9]*) HT*', product.description)
                     else:
-                        ext1 = re.match(r'.*\s([0-9]*) x ([0-9]*) HT', product.description)
-                        if ext1:
-                            largeur = float(ext1.group(1))
-                            hauteur = float(ext1.group(2))
+                        ext1 = re.match(r'.*\s([0-9]*) x ([0-9]*) HT*', product.description)
+                    if ext1:
+                        largeur = float(ext1.group(1))
+                        hauteur = float(ext1.group(2))
                 if largeur == 0 or hauteur == 0:
                     raise osv.except_osv("Error 228", "Erreur de convertion de la chaine avec larngeur et hauteur avec RegEx " + product.name)
                 tms = product.tms
@@ -629,7 +621,7 @@ class stockDayRange(osv.osv):
                             hauteur = line.hauteur
                         else:
                             desc = move.name.replace(u'\n', u' ')
-                            ext1 = re.match(r'.*\s([0-9]*) x ([0-9]*) HT', desc)
+                            ext1 = re.match(r'.*\s([0-9]*) x ([0-9]*) HT*', desc)
                             if ext1:
                                 largeur = float(ext1.group(1))
                                 hauteur = float(ext1.group(2))
@@ -645,7 +637,10 @@ class stockDayRange(osv.osv):
                         localdict['vitre'] = line.vitre.id
                         localdict['type_vitre'] = line.type_vitre
                         localdict['inter'] = line.intermediaire
-                        if line.intermediaire == 'avec':
+                        if line.intermediaire == False:
+                            localdict['inter'] = 'sans'
+                        localdict['type_inter'] = 'vert'
+                        if localdict['inter'] == 'avec':
                             if localdict['largeur'] > localdict['hauteur']:
                                 localdict['type_inter'] = 'vert'
                             else:
